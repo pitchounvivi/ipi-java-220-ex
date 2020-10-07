@@ -13,11 +13,7 @@ public class Entreprise {
 
         //LocalDate.now().getYear(); //récupère l'année courante
 
-        Double prime = 2.0;
-
-        prime = (LocalDate.now().getYear())/prime;
-
-        return prime;
+        return LocalDate.now().getYear()/2d;
     }
 
 }
