@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class Commercial extends Employe{
     private Double caAnnuel;
+    private Integer performance;
 
     public Double getCaAnnuel() {
         return caAnnuel;
@@ -38,11 +39,23 @@ public class Commercial extends Employe{
         if (!(o instanceof Commercial)) return false;
         if (!super.equals(o)) return false;
         Commercial that = (Commercial) o;
-        return Objects.equals(caAnnuel, that.caAnnuel);
+        return Objects.equals(caAnnuel, that.caAnnuel) &&
+                Objects.equals(performance, that.performance) ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), caAnnuel);
+        return Objects.hash(super.hashCode(), caAnnuel, performance);
     }
+
+    public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel, Integer performance) {
+        super(nom, prenom, matricule, dateEmbauche, salaire);
+        this.caAnnuel = caAnnuel;
+        this.performance = performance;
+    }
+
+    public Boolean performanceEgale(Integer performance){
+        return Objects.equals(performance, this.performance);
+    }
+
 }
