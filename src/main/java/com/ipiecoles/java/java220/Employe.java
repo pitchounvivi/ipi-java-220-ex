@@ -53,6 +53,9 @@ public class Employe {
 
     public void setDateEmbauche(LocalDate dateEmbauche) {
         this.dateEmbauche = dateEmbauche;
+
+
+
     }
 
     public Double getSalaire() {
@@ -73,6 +76,10 @@ public class Employe {
             }
             return LocalDate.now().getYear() - dateEmbauche.getYear();
         }
+    }
+
+    public Integer getNbConges(){
+        return Entreprise.NB_CONGES_BASE;
     }
 
 }
