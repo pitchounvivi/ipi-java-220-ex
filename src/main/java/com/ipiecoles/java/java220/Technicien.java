@@ -29,6 +29,11 @@ public class Technicien extends Employe{
 
     @Override
     public void setSalaire(Double salaire) {
+        //gestion d'un grade à 0
+        if (grade == null){
+            super.setSalaire(salaire);
+        }
+
         //super.setSalaire(salaire * (1 + (double) grade / 10));
         super.setSalaire(salaire * (1 + grade / 10d));
     }
