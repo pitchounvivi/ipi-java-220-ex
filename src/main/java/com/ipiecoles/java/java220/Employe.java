@@ -108,4 +108,10 @@ public class Employe {
     public int hashCode() {
         return Objects.hash(nom, prenom, matricule, dateEmbauche, salaire);
     }
+
+    public Double augmenterSalaire(Double augmentation){
+        return salaire += salaire * augmentation;
+    }
+
+
 }
