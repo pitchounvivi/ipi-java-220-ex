@@ -79,4 +79,14 @@ public class Employe {
         return Entreprise.NB_CONGES_BASE;
     }
 
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", dateEmbauche=" + dateEmbauche +
+                ", salaire=" + salaire +
+                '}';
+    }
 }
