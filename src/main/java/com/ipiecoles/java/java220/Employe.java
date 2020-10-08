@@ -114,12 +114,12 @@ public class Employe {
 
 //    public Double augmenterSalaire(Double augmentation){
 //        return salaire += salaire * augmentation;
-//    } // serait valaire mais on ne veut pas renvoyer le salaire
+//    } // serait valable mais on ne veut pas renvoyer le salaire, on veut le salaire augmenté
+    //C'est la méthode d'après la bonne
 
     /**
      * Augmente le salaire du pourcentage renseigné
      * ex : Salaire à 1000, pourcentage = 0.05 => salaire à 1050
-     *
      *
      * @param pourcentage pourcentage est non null et strictement positif
      */
