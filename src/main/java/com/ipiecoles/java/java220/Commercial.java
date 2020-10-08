@@ -21,11 +21,14 @@ public class Commercial extends Employe{
         return 500d;
     }
 
+    public Commercial() {
+        // on peut aussi ajouter le super() au besoin
+    }
 
-    /*public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel) {
+    public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel) {
         super(nom, prenom, matricule, dateEmbauche, salaire);
         this.caAnnuel = caAnnuel;
-    }*/
+    }
 
 
 }
