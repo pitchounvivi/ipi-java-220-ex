@@ -2,6 +2,8 @@ package com.ipiecoles.java.java220;
 
 import org.joda.time.LocalDate;
 
+import java.util.Objects;
+
 public class Commercial extends Employe{
     private Double caAnnuel;
 
@@ -30,5 +32,17 @@ public class Commercial extends Employe{
         this.caAnnuel = caAnnuel;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Commercial)) return false;
+        if (!super.equals(o)) return false;
+        Commercial that = (Commercial) o;
+        return Objects.equals(caAnnuel, that.caAnnuel);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), caAnnuel);
+    }
 }
