@@ -49,8 +49,8 @@ public class Commercial extends Employe{
     }
 
     public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel, Integer performance) {
-        super(nom, prenom, matricule, dateEmbauche, salaire);
-        this.caAnnuel = caAnnuel;
+        //super(nom, prenom, matricule, dateEmbauche, salaire);
+        this(nom, prenom, matricule, dateEmbauche, salaire, caAnnuel); // meilleur écriture dans le cas présent (vu qu'on a déjà des constructeurs on les réutilise)
         this.performance = performance;
     }
 
