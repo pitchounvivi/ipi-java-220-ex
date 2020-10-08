@@ -113,5 +113,9 @@ public class Employe {
         return salaire += salaire * augmentation;
     }
 
+    public Double getPrimeAnnuelle(){
+        return Entreprise.primeAnnuelleBase();
+    }
+
 
 }
