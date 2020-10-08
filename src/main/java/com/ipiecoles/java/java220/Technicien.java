@@ -45,6 +45,13 @@ public class Technicien extends Employe{
 
     @Override
     public Double getPrimeAnnuelle() {
-        return super.getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this. getNombreAnneeAnciennete();
+        return super.getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
+
+    /* //Autre écriture
+    Double primeAnnuelleBase = Entreprise.primeAnnuelleBase();
+    primeAnnuelleBase = primeAnnuelleBase + primeAnnuelleBase * (grade / 10d);
+    return primeAnnuelleBase + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
+    */
+
     }
 }
