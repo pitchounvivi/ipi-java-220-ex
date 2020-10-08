@@ -96,6 +96,7 @@ public class Employe {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Employe)) return false;
+        //if (o == null || getClass() != o.getClass()) return false; //est équivalent à la ligne du dessus
         Employe employe = (Employe) o;
         return Objects.equals(nom, employe.nom) &&
                 Objects.equals(prenom, employe.prenom) &&
