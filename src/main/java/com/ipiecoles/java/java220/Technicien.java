@@ -42,4 +42,9 @@ public class Technicien extends Employe{
     public Integer getNbConges() {
         return super.getNbConges() + this.getNombreAnneeAnciennete();
     }
+
+    @Override
+    public Double getPrimeAnnuelle() {
+        return super.getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this. getNombreAnneeAnciennete();
+    }
 }
