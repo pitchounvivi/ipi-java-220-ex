@@ -13,21 +13,19 @@ public class Commercial extends Employe{
         this.caAnnuel = caAnnuel;
     }
 
-    /*//@Override
-    public Double getPrimeAnnuelle(Double caAnnuel) {
-
-        Double prime = (caAnnuel*5/100);
-
-        if (prime < 500){
-            return prime = 500d;
+    @Override
+    public Double getPrimeAnnuelle() {
+        if (this.caAnnuel != null){
+            return Math.max(Math.ceil(this.caAnnuel * 0.05), 500d);
         }
-        else{
-            return prime;
-        }
-    }*/
+        return 500d;
+    }
 
-    public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel) {
+
+    /*public Commercial(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double caAnnuel) {
         super(nom, prenom, matricule, dateEmbauche, salaire);
         this.caAnnuel = caAnnuel;
-    }
+    }*/
+
+
 }
