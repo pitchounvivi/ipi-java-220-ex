@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by pjvilloud on 21/09/17.
  */
-public class Employe {
+public abstract class Employe {
     private String nom;
     private String prenom;
     private String matricule;
@@ -125,12 +125,16 @@ public class Employe {
      */
     public void augmenterSalaire(Double pourcentage){
         this.salaire = this.salaire * (1+pourcentage);
-        //this.setSalaire((this.getSalaire() * (1+ pourcentage))); autre écriture possible
+        //this.setSalaire((this.getSalaire() * (1+ pourcentage))); autre écriture possible mais pas valable pour test506 à cause de la redéfinition dans le Technicien
     }
 
-    public Double getPrimeAnnuelle(){
+    // mise en commentaire suite exo 402
+/*    public Double getPrimeAnnuelle(){
         return Entreprise.primeAnnuelleBase();
-    }
+    }*/
 
+    public abstract Double getPrimeAnnuelle();
 
 }
+
+
