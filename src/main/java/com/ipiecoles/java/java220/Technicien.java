@@ -49,7 +49,7 @@ public class Technicien extends Employe{
     public Double getPrimeAnnuelle() {
 //        return super.getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
 
-        return getPrimeAnnuelle() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();
+        return Entreprise.primeAnnuelleBase() * (1 + (grade / 10d)) + Entreprise.PRIME_ANCIENNETE * this.getNombreAnneeAnciennete();//après la redéfinition il faut celui-là pour que le 306 passe
 
     /* //Autre écriture
     Double primeAnnuelleBase = Entreprise.primeAnnuelleBase();
